@@ -20,6 +20,8 @@ export class TopicDetailComponent implements OnInit {
   public token;
   public status;
   private url;
+  private lang;
+  private flag;
 
   constructor(
     private _route: ActivatedRoute,
@@ -33,6 +35,7 @@ export class TopicDetailComponent implements OnInit {
     if(this.identity != null)
     this.comment = new Comment('', '', '', this.identity._id);
     this.url = global.url;
+    this.lang = ['css','java','sql','php','javascript','python','typescript','yaml'];
   }
 
   ngOnInit() {
@@ -46,6 +49,10 @@ export class TopicDetailComponent implements OnInit {
         response => {
           if (response.topic) {
             this.topic = response.topic;
+            let index = this.lang.findIndex((lang)=>{
+               return this.flag = (this.topic.lang.toLocaleLowerCase() === lang);
+            }) 
+            console.log(this.flag);
           } else {
             this._router.navigate(['/inicio']);
           }

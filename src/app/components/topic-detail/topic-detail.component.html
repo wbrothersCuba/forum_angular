@@ -17,9 +17,14 @@
 
     <p id="topic-content" class="mt-2">{{topic.content}}</p>
 
-    <p id="topic-code" class="mt-2" *ngIf="topic.code && topic.lang">
-      <ngx-highlight-js lang="{{topic.lang}}" code="{{topic.code}}">{{topic.code}} </ngx-highlight-js>
+    <p id="topic-code" class="mt-2" *ngIf="topic.code && topic.lang && flag">
+      <ngx-highlight-js  lang="{{topic.lang | lowercase }}" code="{{topic.code}}">  </ngx-highlight-js>
     </p>
+
+    <p id="topic-code" class="mt-2" *ngIf="topic.code && topic.lang && !flag">
+      <ngx-highlight-js  lang="bash" code="{{topic.code}}">  </ngx-highlight-js>
+    </p>
+ 
   </div>
   <div class="clearfix"> </div>
 
