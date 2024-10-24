@@ -45,3 +45,4 @@ URL: 'http://localhost/api-rest-laravel/public/api/',
 ## TO DO
 - Update to Angular version to 18.
 - Update Bootstrap to version 5.
+- Update Highlight.js 
