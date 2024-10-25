@@ -4,7 +4,7 @@
 https://wbrothers-forum-angular.netlify.app/ 
 
 - Backend
-https://github.com/wbrothersCuba/wbrothers-forum-angular
+https://forum-wbrothers-api-production.up.railway.app/ 
   
 
 This forum is a **responsive frontend SPA** build with **Angular** and **Bootstrap**. Registration is required to access all features. Each user can edit and delete only their post.
