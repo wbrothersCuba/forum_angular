@@ -15,10 +15,10 @@
         <td>{{topic.title}}</td>
         <td>{{topic.date | amLocale:'en' | amDateFormat:'LL'}}</td>
         <td>
-          <a [routerLink]="['/panel/editar',topic._id]" class="btn btn-sm btn-warning mr-2">Edit</a>
+          <a [routerLink]="['/panel/editar',topic._id]" class="btn btn-sm btn-warning mr-2 mt-2">Edit</a>
         
           <!-- Button to Open the Modal -->
-          <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" [attr.data-target]="'#modal'+topic._id">
+          <button type="button" class="btn btn-sm btn-danger mt-2" data-toggle="modal" [attr.data-target]="'#modal'+topic._id">
             Delete
           </button>
 
